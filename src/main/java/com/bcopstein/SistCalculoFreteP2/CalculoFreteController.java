@@ -24,15 +24,14 @@ import com.bcopstein.SistCalculoFreteP2.util.ResultadoPesquisaCEP;
 
 import javax.imageio.event.IIOReadProgressListener;
 
+import lombok.AllArgsConstructor;
+
 @RestController
 @RequestMapping("/calculoFrete")
+@AllArgsConstructor
 public class CalculoFreteController {
     private IRepositorioDeCidades repositorioDeCidades;
 
-    @Autowired
-    public CalculoFreteController(IRepositorioDeCidades repositorioDeCidades) {
-        this.repositorioDeCidades = repositorioDeCidades;
-    }
 
     @GetMapping("/cidadesAtendidas")
     @CrossOrigin(origins = "*")
